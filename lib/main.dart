@@ -10,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FluentApp(
-      title: 'XCA News',
+      title: 'Smart Home',
       theme:
       ThemeData(brightness: Brightness.light, accentColor: Colors.orange),
       darkTheme:
       ThemeData(brightness: Brightness.dark, accentColor: Colors.orange),
-      home:  tim(),
+      home: HomePage(),
     );
   }
 }
