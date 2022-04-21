@@ -1,5 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart' as material;
+import 'package:smarthome/getdata.dart';
 import 'package:smarthome/rooms/tim.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +28,12 @@ class HomePage extends StatelessWidget {
                       ),
                     ),side: material.MaterialStateProperty.all(BorderSide(width: 2.0, color: Colors.white))
                 ),
-                onPressed: () => {},
+                onPressed: () => {
+                  Navigator.push(
+                            context,
+                                material.MaterialPageRoute(builder: (context) => getdata()),
+                            )
+                },
                 child: material.Column( // Replace with a Row for horizontal icon + text
                   children: <Widget>[
                     material.Icon(material.Icons.home, color: Colors.white, size: 80),
