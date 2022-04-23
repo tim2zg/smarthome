@@ -1,7 +1,9 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:smarthome/getdata.dart';
-import 'package:smarthome/rooms/tim.dart';
+import 'getdata.dart';
+import 'package:smarthome/help/home.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -31,7 +33,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () => {
                   Navigator.push(
                             context,
-                                material.MaterialPageRoute(builder: (context) => getdata()),
+                                material.MaterialPageRoute(builder: (context) => SimpleTimeSeriesChart()),
                             )
                 },
                 child: material.Column( // Replace with a Row for horizontal icon + text
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
                     material.SizedBox(height:  5),
                     material.FittedBox(
                       fit: BoxFit.fitWidth,
-                      child: material.Text('Reddit', style: TextStyle(fontSize: 20, color: Colors.white),),
+                      child: material.Text('Uff', style: TextStyle(fontSize: 20, color: Colors.white),),
                     ),
                   ],
                 ),
@@ -56,7 +58,7 @@ class HomePage extends StatelessWidget {
                 ),
                 onPressed: () => {Navigator.push(
                 context,
-                material.MaterialPageRoute(builder: (context) => tim()),
+                material.MaterialPageRoute(builder: (context) => getdata()),
                 )},
                 child: material.Column( // Replace with a Row for horizontal icon + text
                   children: <Widget>[
