@@ -2,10 +2,12 @@ import 'package:fluent_ui/fluent_ui.dart';
 import 'Homepage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FluentApp(
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       ThemeData(brightness: Brightness.light, accentColor: Colors.orange),
       darkTheme:
       ThemeData(brightness: Brightness.dark, accentColor: Colors.orange),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

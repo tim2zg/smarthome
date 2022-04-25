@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_types_as_parameter_names
+
 import 'package:charts_flutter/flutter.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:influxdb_client/api.dart';
@@ -82,6 +84,7 @@ Future<List<Series<dynamic, DateTime>>> getalldata() async {
   ];
 }
 
+// ignore: camel_case_types
 class data {
   final DateTime time;
   final double value;
@@ -90,10 +93,12 @@ class data {
 }
 
 class getdata extends StatelessWidget {
+  const getdata({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: Button(onPressed: () => {getthedata()}, child: Text("What have you done"),),),);
+            child: Button(onPressed: () => {getthedata()}, child: const Text("What have you done"),),),);
 }}
