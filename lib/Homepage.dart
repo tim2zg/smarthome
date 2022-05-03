@@ -1,8 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart' as material;
+import 'package:smarthome/rooms/tim.dart';
 import 'solaroverview.dart';
-import 'package:smarthome/help/home.dart';
-
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,7 +33,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () => {
                   Navigator.push(
                             context,
-                                material.MaterialPageRoute(builder: (context) => const SimpleTimeSeriesChart()),
+                                material.MaterialPageRoute(builder: (context) =>  tim()),
                             )
                 },
                 child: material.Column(
@@ -45,11 +44,12 @@ class HomePage extends StatelessWidget {
                     material.SizedBox(height:  5),
                     material.FittedBox(
                       fit: BoxFit.fitWidth,
-                      child: material.Text('Uff', style: TextStyle(fontSize: 20, color: Colors.white),),
+                      child: material.Text('Tim', style: TextStyle(fontSize: 20, color: Colors.white),),
                     ),
                   ],
                 ),
-              ),),material.ButtonTheme(
+              ),),
+            material.ButtonTheme(
               child: material.OutlinedButton(
                 style: material.ButtonStyle(
                     shape: material.MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -71,11 +71,13 @@ class HomePage extends StatelessWidget {
                     material.SizedBox(height:  5),
                     material.FittedBox(
                       fit: BoxFit.fitWidth,
-                      child: material.Text('Tim', style: TextStyle(fontSize: 20, color: Colors.white),),
+                      child: material.Text('Solar', style: TextStyle(fontSize: 20, color: Colors.white),),
                     ),
                   ],
                 ),
-              ),),
+              ),
+
+            ),
           ],
         )
     );

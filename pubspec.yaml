@@ -52,6 +52,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+  msix: ^3.5.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -94,3 +95,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+msix_config:
+  display_name: SmartHomeControl
+  publisher_name: Some nerds software kokag
+  identity_name: PXCT
+  msix_version: 1.0.0.0
+  certificate_path: C:\Users\Tim\mycertscert.pfx
+  certificate_password: tim
+  certificate_subject: CN=PXCT
+  icons_background_color: ffffff
+  architecture: x64
